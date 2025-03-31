@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import LandingHeader from '../components/LandingHeader.astro'
+import Layout from '../layouts/Layout.astro'
+import HeroSection from '../components/HeroSection.astro'
+import ChargeSection from '../components/ChargeSection.astro';
+import "../styles/global.css";
+import Section from '../components/Section.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Tesla - El coche de tus sueños(y de Elon Musk">
+	<LandingHeader />
+
+	<main class="snap-y snap-mandatory  relative w-full h-screen overflow-auto">
+		<div class="snap-center">
+			<Section 
+			title='Disfrute de Tesla' 
+			subtitle="Programe una prueba de conducción hoy mismo"
+			color="white">
+
+				<div slot="footer">
+					<a class="text-white border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors " href="#">Prueba de cunducción</a>
+				</div>
+
+				<video 
+				slot="background"
+				class="object-center object-cover h-full w-full" 
+				autoplay 
+				muted 
+				loop 
+				src="/video.webm">
+				</video>
+			</Section>
+		</div>
+		<div class="snap-center">
+			<ChargeSection />
+		</div>
+	</main>
 </Layout>
+
