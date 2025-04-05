@@ -2,19 +2,43 @@
 import LandingHeader from '../components/LandingHeader.astro'
 import Layout from '../layouts/Layout.astro'
 import HeroSection from '../components/HeroSection.astro'
-import ChargeSection from '../components/ChargeSection.astro';
-import "../styles/global.css";
-import Section from '../components/Section.astro';
+import '../styles/global.css'
+import Powerwall from '../components/Powerwall.astro'
+import ModelY from '../components/ModelY.astro'
+import ModelS from '../components/ModelS.astro'
+import Model3 from '../components/Model3.astro'
+import ModelX from '../components/ModelX.astro'
+import Accesorios from '../components/Accesorios.astro'
+
+
 ---
 
 <Layout title="Tesla - El coche de tus sueños(y de Elon Musk">
 	<LandingHeader />
-		<main class="snap-y snap-mandatory  relative w-full h-screen overflow-auto">
+
+		<main 
+		class="snap-y snap-mandatory  relative w-full h-screen overflow-auto">
+
 		<div class="snap-center">
 			<HeroSection/>
 		</div>
 		<div class="snap-center">
-			<ChargeSection />
+			<ModelY />
+		</div>
+		<div class="snap-center">
+			<ModelS/>
+		</div>
+		<div class="snap-center">
+			<Model3/>
+		</div>
+		<div class="snap-center">
+			<ModelX/>
+		</div>
+		<div class="snap-center">
+			<Powerwall/>
+		</div>
+		<div class="snap-center">
+			<Accesorios/>
 		</div>
 	</main>
 </Layout>
