@@ -17,27 +17,28 @@ import Accesorios from '../components/Accesorios.astro'
 	<LandingHeader />
 
 		<main 
-		class="snap-y snap-mandatory  relative w-full h-screen overflow-auto">
+		class="scroll-smooth snap-y snap-mandatory  relative w-full h-screen overflow-auto">
 
-		<div class="snap-center">
+		<div id="initial" class="snap-center">
 			<HeroSection/>
 		</div>
-		<div class="snap-center">
-			<ModelY />
-		</div>
-		<div class="snap-center">
+		
+		<div id="model-s" class="snap-center">
 			<ModelS/>
 		</div>
-		<div class="snap-center">
+		<div id="model-3" class="snap-center">
 			<Model3/>
 		</div>
-		<div class="snap-center">
+		<div id="model-x" class="snap-center">
 			<ModelX/>
 		</div>
-		<div class="snap-center">
+		<div id="model-y" class="snap-center">
+			<ModelY />
+		</div>
+		<div id="porwerall" class="snap-center">
 			<Powerwall/>
 		</div>
-		<div class="snap-center">
+		<div id="accesorios" class="snap-center">
 			<Accesorios/>
 		</div>
 	</main>
